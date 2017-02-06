@@ -1,0 +1,111 @@
+<!--  
+      CREATED BY ALI ELABRIDI
+      FOR THE HONOR CLASS OF DATABASE SYSTEM
+      TO DEMONSTRATE THE USE OF JSON
+      SUPERVISOR: Pr Youssra Chtouki
+ -->
+
+<!DOCTYPE html>
+<html ng-app="angularjs-starter">
+  
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>AUI search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>   
+    /*define a contains method to embed in the String object*/
+    String.prototype.contains = function(it) { return this.toLowerCase().indexOf(it.toLowerCase()) != -1; };
+
+    /*start our AngularJS module*/
+    var app = angular.module('angularjs-starter', []);
+  
+    app.controller('MainCtrl', function($scope, $http) {
+      /*force getJSON function to run async since AngularJS does not wait to display the list*/
+      $.ajaxSetup({
+      async: false
+      });
+
+      $scope.search = {};
+      $scope.Search = function() {
+      /*where we will store our matching records to be added to the table*/
+      $scope.records = [];
+      /*use the getJSON method provided by JQuery to load the Json file and parse it inplicitely in the data var*/
+      $.getJSON('AUI_IDs.json', function (data) {
+          console.log(data); /*to see that the data object already loaded json data*/
+          for (var i = 0, len = data.length; i < len; i++) {
+            if(
+              (data[i].Firstname != null && data[i].Firstname.contains($scope.search.model)) ||
+              (data[i].Lastname != null &&  data[i].Lastname.contains($scope.search.model)) ||
+              data[i].ID == $scope.search.model 
+              ){
+                /*if it matches any of the criterion, we add it to the array*/
+                $scope.records.push(data[i]);
+            }
+  
+          }
+        });
+        $scope.search.change = $scope.search.model;
+      };
+      
+    });
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+    *{
+      font-family: 'Roboto', sans-serif;
+    }
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 5px;
+    }
+    table {
+    border-spacing: 1px;
+
+    }
+
+      table#t01 {
+    width: 100%; 
+    }
+    table#t01 tr:nth-child(even) {
+    background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+    }
+    table#t01 th {
+    color: white;
+    background-color: #0099ff;
+    }
+    </style>
+  </head>
+    <br>
+
+  <body ng-controller="MainCtrl">
+    Search: <input ng-model="search.model"  placeholder="e.g. 59967, Ahmed, Cavalli" size="35">
+    <button ng-click="Search()">Search!</button>
+    <br>
+    <br>
+
+    <table border="1" style="width:50%" id="t01">
+        <tr>
+          <th>Student ID</th>
+          <th>Firstname</th> 
+          <th>Lastname</th>
+          <th>E-mail</th>
+        </tr>
+        <tr ng-repeat="x in records">
+        <td>{{x.ID}}</td> 
+        <td>{{x.Firstname}}</td>
+        <td>{{x.Lastname}}</td> 
+        <td>{{x.ID}}@aui.ma</td> 
+        </tr>
+    </table>
+
+  </body>
+
+</html>
