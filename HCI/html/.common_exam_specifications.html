@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+
+  <!-- content -->
+  <div id="content" class="app-content" role="main">
+  	<div class="app-content-body ">
+	    
+
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">
+      Common Exams Specifications - Registration Officer Panel
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal" method="get">
+   
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Earliest Start</label>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="e.g. 8:00AM">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Latest Exam</label>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="e.g. 5:00PM">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Exam Length Time</label>
+          <div class="col-sm-10">
+            <input id="slider" ui-jq="slider" ui-options="{
+              min: 30,
+              max: 180,
+              step: 10,
+              value: 50
+            }" class="slider slider-horizontal form-control" type="text"> Minutes
+          </div>
+        </div>
+          <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Minimum Break Time</label>
+          <div class="col-sm-10">
+            <input id="slider" ui-jq="slider" ui-options="{
+              min: 10,
+              max: 60,
+              step: 10,
+              value: 20
+            }" class="slider slider-horizontal form-control" type="text"> Minutes
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Common Exam Schedule</label>
+          <div class="col-sm-10">
+            <input ui-jq="daterangepicker" ui-options="{
+                format: 'YYYY-MM-DD',
+                startDate: '2017-01-01',
+                endDate: '2017-12-31'
+              }" class="form-control w-md" />
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Available Classrooms</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen" multiple class="w-md">
+              <option value="AK">Building 4 - Room 101 (Capacity: 60)</option>
+              <option value="AK">Building 4 - Room 201 (Capacity: 60)</option>
+              <option value="AK">Building 4 - Room 103 (Capacity: 60)</option>
+              <option value="AK">Building 4 - Room 104 (Capacity: 60)</option>
+              <option value="AK">Building 4 - Room 109 (Capacity: 60)</option>
+              <option value="AK">Building 5 - Room 109 (Capacity: 60)</option>
+              <option value="AK">Building 5 - Room 109 (Capacity: 60)</option>
+              <option value="AK">Building 5 - Room 109 (Capacity: 60)</option>
+              <option value="AK">Building 5 - Room 109 (Capacity: 60)</option>
+
+            </select>
+          </div>
+        </div>
+
+
+
+
+
+
+        
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+            <button type="submit" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-info">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+	</div>
+  </div>
+  <!-- /content -->
+  
+
+
+</div>
+
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+</body>
+</html>

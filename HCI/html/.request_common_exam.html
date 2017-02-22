@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+  <!-- content -->
+  <div id="content" class="app-content" role="main">
+  	<div class="app-content-body ">
+	    
+
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <div class="row">
+    <div class="col-sm-6">
+    </div>
+
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">
+      Request Common Exam - Professor Panel
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal" method="get">
+
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Chosen Classes/Sections</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen" multiple class="w-md" >
+              <option value="AK">Artificial Intelligence - Section 1</option>
+              <option value="AK">Artificial Intelligence - Section 2</option>
+              <option value="AK">Artificial Intelligence - Section 3</option>
+              <option value="AK">Data Structures - Section 1</option>
+              <option value="AK">Data Structures - Section 2</option>
+              <option value="AK">Data Structures - Section 3</option>
+              <option value="AK">Data Structures - Section 4 (Dr. Elabridi)</option>
+              <option value="AK">Human Computer Interaction - Section 5 (Dr. Elabridi)</option>
+            </select>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Building/Room Preference</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen" class="w-full">
+             <optgroup label="Building 5">
+                    <option value="AK">Building 5 - Room 107 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 5 - Room 106 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 5 - Room 109 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 5 - Room 104 (Capacity: 60 Students)</option>
+                </optgroup>
+                <optgroup label="Building 4">
+                    <option value="AK">Building 4 - Room 207 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 206 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 209 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 204 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 207 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 206 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 209 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 204 (Capacity: 60 Students)</option>
+                </optgroup>
+                  <optgroup label="Building 6">
+                    <option value="AK">Building 4 - Room 207 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 206 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 209 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 204 (Capacity: 60 Students)</option>
+                </optgroup>
+                <optgroup label="Building 7">
+                    <option value="AK">Building 4 - Room 207 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 206 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 209 (Capacity: 60 Students)</option>
+                    <option value="AK">Building 4 - Room 204 (Capacity: 60 Students)</option>
+                </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Flexible Room Choice?</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label class="i-checks">
+                <input type="radio" name="a" value="option1" checked>
+                <i></i>
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label class="i-checks">
+                <input type="radio" name="a" value="option2" >
+                <i></i>
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Multiple Rooms?</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label class="i-checks">
+                <input type="radio" name="a1" value="option1" checked>
+                <i></i>
+                Yes, if necessary
+              </label>
+            </div>
+            <div class="radio">
+              <label class="i-checks">
+                <input type="radio" name="a1" value="option2" >
+                <i></i>
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Examination Date Range</label>
+          <div class="col-sm-10">
+            <input ui-jq="daterangepicker" ui-options="{
+                format: 'YYYY-MM-DD',
+                startDate: '2017-01-01',
+                endDate: '2017-12-31'
+              }" class="form-control w-md" />
+          </div>
+        </div>
+
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+            <button type="submit" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-info">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+	</div>
+  </div>
+  <!-- /content -->
+
+
+
+
+</div>
+
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+</body>
+</html>
